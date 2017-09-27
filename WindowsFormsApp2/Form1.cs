@@ -113,12 +113,12 @@ public partial class Form1 : Form
 {
     SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
     SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-    string[] myCommands = new string[] { "hello", "Dynamics Nav", "Open Notepad++"};
+    string[] myCommands = new string[] { "hello", "Dynamics Nav", "Open Notepad++", "Close Notepad"};
     public Form1()
     {
         InitializeComponent();
     }
-
+        
     private void button1_Click(object sender, EventArgs e)
     {
         if (button1.Text.Equals("Enable Voice Control"))
@@ -151,18 +151,37 @@ public partial class Form1 : Form
     {
                 Process cmd = new Process();
                 cmd.StartInfo.FileName = @"notepad++.exe";
-                //cmd.StartInfo.Arguments = @"K/";
+                cmd.StartInfo.Arguments =@"\Write.txt";
+                            
                 cmd.Start();
                 cmd.CloseMainWindow();
                 cmd.WaitForExit();
                 cmd.Refresh();
+                for (int ii = 0; ii < 5; ii++)
+            {
+                if(!cmd.HasExited)
+                {
+                    cmd.Refresh();
+                    Console.WriteLine("Physical Memory Usage:" + cmd.WorkingSet.ToString());
+                    Thread.Sleep(2000);
+                    
+                }
 
+                else
+                {
+                    break;
+                }
+            }
+        //    cmd.CloseMainWindow();
+         //   cmd.Close();
+           
+                
             //  if (cmd.StandardError != null)
             // Console.WriteLine(cmd.StandardError.ReadToEnd());
 
 
-
-            //if (cmd.StartInfo.FileName = ToString(@"notepad++.exe"))
+            
+            //if (cmd.ToString.StartInfo.FileName) = ToString(@"notepad++.exe"))  // String to bool Problem 
             //{
             //    cmd.StartInfo.Arguments = @"K/";
             //    cmd.Start();
@@ -171,6 +190,7 @@ public partial class Form1 : Form
             //    cmd.WaitForExit();
             //    cmd.Refresh();
             //}
+
             //else
             //{
             //    cmd.Kill();
@@ -187,5 +207,10 @@ public partial class Form1 : Form
             }
         }
     }
-}
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

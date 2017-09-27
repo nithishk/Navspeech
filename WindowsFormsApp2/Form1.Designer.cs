@@ -49,6 +49,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(268, 213);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "-Log-";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // Form1
             // 
