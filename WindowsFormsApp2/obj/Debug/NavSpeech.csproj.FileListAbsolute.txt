@@ -1,0 +1,12 @@
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\NavSpeech.csproj.GenerateResource.Cache
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\NavSpeech.csproj.CoreCompileInputs.cache
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\NavSpeech.csprojResolveAssemblyReference.cache
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources

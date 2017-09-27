@@ -1,0 +1,12 @@
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojResolveAssemblyReference.cache
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.Cache
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.dll
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.xml
+c:\users\nithish.kalakonda\documents\visual studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\Backend.Helper.Serializer.resources
