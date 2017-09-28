@@ -132,6 +132,7 @@ namespace WindowsFormsApp2
         InitializeComponent();
     }
         
+        // Button Reference
     private void button1_Click(object sender, EventArgs e)
     {
         if (button1.Text.Equals("Enable Voice Control"))
@@ -169,10 +170,7 @@ namespace WindowsFormsApp2
                 cmd.CloseMainWindow();
                 cmd.WaitForExit();
                 cmd.Refresh();
-          //    cmd.CloseMainWindow();
-           //   cmd.Close();
-
-
+            
             //  if (cmd.StandardError != null)
             // Console.WriteLine(cmd.StandardError.ReadToEnd());
 
@@ -181,7 +179,12 @@ namespace WindowsFormsApp2
                 var i = 0;
         foreach (var command in myCommands)
         {
-                if (command.StartsWith("--") || command == string.Empty) continue;  // Skip commentBlocks and skipEmptylines
+
+                if (command.StartsWith("Stop"))
+                    {
+                    cmd.Kill();
+                }
+            if (command.StartsWith("--") || command == string.Empty) continue;  // Skip commentBlocks and skipEmptylines
                 var parts = command.Split(new char[] { '|' }); // Split the lines
                        i++;
             if (command.Equals(result.Text))
