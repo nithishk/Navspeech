@@ -119,7 +119,7 @@ namespace WindowsFormsApp2
 //        public bool IsShellCommand { get; set; }  // flag determining whether this word is an command or not
 
 //    }
-    public partial class Form1 : Form
+    public partial class NavSpeech : Form
 {
     SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
     SpeechSynthesizer synthesizer = new SpeechSynthesizer();
@@ -127,7 +127,7 @@ namespace WindowsFormsApp2
         string[] myCommands = File.ReadAllLines(Environment.CurrentDirectory + "\\test.txt");
             
 
-    public Form1()
+    public NavSpeech()
     {
         InitializeComponent();
     }
@@ -163,17 +163,14 @@ namespace WindowsFormsApp2
     void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
     {
                 Process cmd = new Process();
-              //  cmd.StartInfo.FileName = @"C:\Windows\System32\cmd.exe";
-
                 cmd.StartInfo.FileName = @"notepad++.exe" ;
                 cmd.StartInfo.Arguments =@"\Write.txt";
                 cmd.Start();
                 cmd.CloseMainWindow();
                 cmd.WaitForExit();
                 cmd.Refresh();
-                        
-            //    cmd.CloseMainWindow();
-            //   cmd.Close();
+          //    cmd.CloseMainWindow();
+           //   cmd.Close();
 
 
             //  if (cmd.StandardError != null)
