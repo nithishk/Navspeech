@@ -111,14 +111,14 @@ namespace WindowsFormsApp2
 {
 
 
-public class Word
-    {
-        public Word() { }
-        public string Text { get; set; }          // the word to be recognized by the engine
-        public string AttachedText { get; set; }  // the text associated with the recognized word
-        public bool IsShellCommand { get; set; }  // flag determining whether this word is an command or not
+//public class Word
+//    {
+//        public Word() { }
+//        public string Text { get; set; }          // the word to be recognized by the engine
+//        public string AttachedText { get; set; }  // the text associated with the recognized word
+//        public bool IsShellCommand { get; set; }  // flag determining whether this word is an command or not
 
-    }
+//    }
     public partial class Form1 : Form
 {
     SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
@@ -167,7 +167,7 @@ public class Word
                 Process cmd = new Process();
               //  cmd.StartInfo.FileName = @"C:\Windows\System32\cmd.exe";
 
-            cmd.StartInfo.FileName = @"notepad++.exe" ;
+                cmd.StartInfo.FileName = @"notepad++.exe" ;
                 cmd.StartInfo.Arguments =@"\Write.txt";
           
                 cmd.Start();
@@ -219,7 +219,7 @@ public class Word
         {
                 if (command.StartsWith("--") || command == string.Empty) continue;  // Skip commentBlocks and skipEmptylines
                 var parts = command.Split(new char[] { '|' }); // Split the lines
-        
+            //    Word word = new Word();
             i++;
             if (command.Equals(result.Text))
             {
