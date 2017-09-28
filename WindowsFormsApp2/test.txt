@@ -1,0 +1,5 @@
+ hello 
+ Dynamics Nav 
+ cmd 
+ Notepad++ 
+ Close Notepad

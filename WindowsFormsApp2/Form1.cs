@@ -99,14 +99,14 @@ using System.Threading;
 //    }
 
 
-    /*
-     * 
-     * Wrapper class to store the input from File and Object CMD should search in the file 
-     * open Notepad++ and write something into it, save and close  
-     * Here it starts with CMD (should be able to take multiple arguments) 
-     * */
+/*
+ * 
+ * 1). Wrapper class to store the input from File and Object CMD should search in the file 
+ * open Notepad++ and write something into it, save and close  
+ * Here it starts with CMD (should be able to take multiple arguments) 
+ * */
 
-    
+
 namespace WindowsFormsApp2
 {
 
@@ -114,7 +114,11 @@ public partial class Form1 : Form
 {
     SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
     SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-    string[] myCommands = new string[] { "hello", "Dynamics Nav", "cmd", "Notepad++", "Close Notepad"};
+        //  string[] myCommands = new string[] { "hello", "Dynamics Nav", "cmd", "Notepad++", "Close Notepad"};
+        string[] myCommands = File.ReadAllLines(Environment.CurrentDirectory + "\\test.txt");
+            
+
+
     public Form1()
     {
         InitializeComponent();
@@ -151,7 +155,6 @@ public partial class Form1 : Form
     void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
     {
                 Process cmd = new Process();
-            cmd.StartInfo.Arguments = @"\D.txt";
               //  cmd.StartInfo.FileName = @"C:\Windows\System32\cmd.exe";
 
             cmd.StartInfo.FileName = @"notepad++.exe" ;
@@ -161,21 +164,22 @@ public partial class Form1 : Form
                 cmd.CloseMainWindow();
                 cmd.WaitForExit();
                 cmd.Refresh();
-                for (int ii = 0; ii < 5; ii++)
-            {
-                if(!cmd.HasExited)
-                {
-                    cmd.Refresh();
-                    Console.WriteLine("Physical Memory Usage:" + cmd.WorkingSet.ToString());
-                    Thread.Sleep(2000);
+
+           
+            //    for (int ii = 0; ii < 5; ii++)
+            //{
+            //    if(!cmd.HasExited)
+            //    {
+            //        cmd.Refresh();
+            //        Console.WriteLine("Physical Memory Usage:" + cmd.WorkingSet.ToString());
+            //        Thread.Sleep(2000);
                     
-                }
-                cmd.sto
-                else
-                {
-                    break;
-                }
-            }
+            //    }
+            //    else
+            //    {
+            //        break;
+            //    }
+            //}
         //    cmd.CloseMainWindow();
          //   cmd.Close();
            
