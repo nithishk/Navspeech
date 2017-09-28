@@ -127,8 +127,6 @@ namespace WindowsFormsApp2
         string[] myCommands = File.ReadAllLines(Environment.CurrentDirectory + "\\test.txt");
             
 
-
-
     public Form1()
     {
         InitializeComponent();
@@ -169,58 +167,26 @@ namespace WindowsFormsApp2
 
                 cmd.StartInfo.FileName = @"notepad++.exe" ;
                 cmd.StartInfo.Arguments =@"\Write.txt";
-          
                 cmd.Start();
                 cmd.CloseMainWindow();
                 cmd.WaitForExit();
                 cmd.Refresh();
+                        
+            //    cmd.CloseMainWindow();
+            //   cmd.Close();
 
-           
-            //    for (int ii = 0; ii < 5; ii++)
-            //{
-            //    if(!cmd.HasExited)
-            //    {
-            //        cmd.Refresh();
-            //        Console.WriteLine("Physical Memory Usage:" + cmd.WorkingSet.ToString());
-            //        Thread.Sleep(2000);
-                    
-            //    }
-            //    else
-            //    {
-            //        break;
-            //    }
-            //}
-        //    cmd.CloseMainWindow();
-         //   cmd.Close();
-           
-                
+
             //  if (cmd.StandardError != null)
             // Console.WriteLine(cmd.StandardError.ReadToEnd());
 
 
-            
-            //if (cmd.ToString.StartInfo.FileName) = ToString(@"notepad++.exe"))  // String to bool Problem 
-            //{
-            //    cmd.StartInfo.Arguments = @"K/";
-            //    cmd.Start();
-            //    Thread.Sleep(100);
-            //    cmd.WaitForInputIdle();
-            //    cmd.WaitForExit();
-            //    cmd.Refresh();
-            //}
-
-            //else
-            //{
-            //    cmd.Kill();
-            //}
             var result = e.Result;
                 var i = 0;
         foreach (var command in myCommands)
         {
                 if (command.StartsWith("--") || command == string.Empty) continue;  // Skip commentBlocks and skipEmptylines
                 var parts = command.Split(new char[] { '|' }); // Split the lines
-            //    Word word = new Word();
-            i++;
+                       i++;
             if (command.Equals(result.Text))
             {
                 Console.WriteLine("Command is  {0}: {1}", i, command);
@@ -231,7 +197,6 @@ namespace WindowsFormsApp2
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
