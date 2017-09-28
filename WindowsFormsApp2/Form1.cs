@@ -110,13 +110,23 @@ using System.Threading;
 namespace WindowsFormsApp2
 {
 
-public partial class Form1 : Form
+
+public class Word
+    {
+        public Word() { }
+        public string Text { get; set; }          // the word to be recognized by the engine
+        public string AttachedText { get; set; }  // the text associated with the recognized word
+        public bool IsShellCommand { get; set; }  // flag determining whether this word is an command or not
+
+    }
+    public partial class Form1 : Form
 {
     SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
     SpeechSynthesizer synthesizer = new SpeechSynthesizer();
         //  string[] myCommands = new string[] { "hello", "Dynamics Nav", "cmd", "Notepad++", "Close Notepad"};
         string[] myCommands = File.ReadAllLines(Environment.CurrentDirectory + "\\test.txt");
             
+
 
 
     public Form1()
@@ -207,6 +217,9 @@ public partial class Form1 : Form
                 var i = 0;
         foreach (var command in myCommands)
         {
+                if (command.StartsWith("--") || command == string.Empty) continue;  // Skip commentBlocks and skipEmptylines
+                var parts = command.Split(new char[] { '|' }); // Split the lines
+        
             i++;
             if (command.Equals(result.Text))
             {

@@ -9,4 +9,4 @@ C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpee
 C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\NavSpeech.csprojResolveAssemblyReference.cache
-C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\Nithish.Kalakonda\Documents\Visual Studio 2017\Projects\DynamicsNavSpeech\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Word.resources
