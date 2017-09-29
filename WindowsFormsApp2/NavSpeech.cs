@@ -17,94 +17,95 @@ using System.IO;
 using System.Diagnostics;
 using System.Threading;
 
-//namespace Backend.Helper
-//{
-//    public static class Serializer
-//    {
-//        public enum ConversionTypes
-//        {
-//            Xml, Json
-//        }
-//    }
-//}
+namespace backend.helper
+{
+    public static class serializer
+    {
+        public enum Conversiontypes
+        {
+            xml, json
+        }
+    }
+}
 
-//    public class Serializer<T> : INotifyPropertyChanged
-//{
-//        #region INotifyPropertyChanged implementation
-//      public event PropertyChangedEventHandler PropertyChanged;
-//      [NonSerialized]
-//      private bool _modified;
-//      [XmlIgnore]
-//    public bool Modified
-//    {
-//        get
-//        {
-//            var mod = Modified;
-//            _modified = false;
-//            return mod;
-//        }
-//    }
+public class Serializer<T> : INotifyPropertyChanged
+{
+    #region INotifyPropertyChanged implementation
+    public event PropertyChangedEventHandler PropertyChanged;
+    [NonSerialized]
+    private bool _modified;
+    [XmlIgnore]
+    public bool Modified
+    {
+        get
+        {
+            var mod = Modified;
+            _modified = false;
+            return mod;
+        }
+    }
 
-//    protected void Notify([CallerMemberName] string propertyName = "")
-//      {
-//        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-//        _modified = true;
-//    }
+    protected void Notify([CallerMemberName] string propertyName = "")
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        _modified = true;
+    }
 
-//    #endregion INotifyPropertyChanged Implementation
+        #endregion INotifyPropertyChanged Implementation
 
-//    public static string GetDefaultFileName()
-//    {
-//        return Path.Combine(GetDefaultDirectoryName(), typeof(T).Name);
-//    }
+        public static string GetDefaultFileName()
+        {
+        return Path.Combine(GetDefaultDirectoryName(), typeof(T).Name);
+    }
 
-//    public static string GetDefaultFileNameWithExtension()
-//    {
-//        return Path.Combine(GetDefaultDirectoryName(), typeof(T).Name + ".json");
-//    }
+        public static string GetDefaultFileNameWithExtension()
+        {
+            return Path.Combine(GetDefaultDirectoryName(), typeof(T).Name + ".json");
+        }
 
-//    public static string GetDefaultDirectoryName()
-//    {
-//        var path = System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase;
-//        path = Path.GetDirectoryName(path);
-//        return path;
-//    }
+        public static string GetDefaultDirectoryName()
+    {
+        var path = System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase;
+        path = Path.GetDirectoryName(path);
+        return path;
+    }
 
-//        public void Save(string fileName = " ", Serializer.ConversionTypes conversionType = Serializer.ConversionTypes.Json)
-//        {
-//            if (fileName == null)
-//                fileName = string.Empty;
-//            if (string.IsNullOrEmpty(fileName))
-//                fileName = GetDefaultDirectoryName();
-//            try
-//            {
-//                if (fileName.Contains("file:\\"))
-//                    fileName = fileName.Remove(0, 6);
+            public void Save(string fileName = " ", Serializer.ConversionTypes conversionType = Serializer.ConversionTypes.Json)
+            {
+        if (fileName == null)
+            fileName = string.Empty;
+        if (string.IsNullOrEmpty(fileName))
+            fileName = GetDefaultDirectoryName();
+        try
+        {
+            if (fileName.Contains("file:\\"))
+                fileName = fileName.Remove(0, 6);
 
-//                var ending = conversionType == Serializer.ConversionTypes.Json ? ".Json" : ".xml";
-//                var dir = Path.GetDirectoryName(fileName);
-//            if (fileName.IndexOf(@"\", StringComparison.Ordinal) >= 0)
-//                if (!string.IsNullOrEmpty(dir))
-//                    Directory.CreateDirectory(dir);
+            var ending = conversionType == Serializer.ConversionTypes.Json ? ".Json" : ".xml";
+            var dir = Path.GetDirectoryName(fileName);
+            if (fileName.IndexOf(@"\", StringComparison.Ordinal) >= 0)
+                if (!string.IsNullOrEmpty(dir))
+                    Directory.CreateDirectory(dir);
 
-//            if(!Path.HasExtension(fileName))
-//                fileName = Path.Combine(fileName, typeof(T).Name + ending);
-//            var 
-//        catch
-//        {
+            if (!Path.HasExtension(fileName))
+                fileName = Path.Combine(fileName, typeof(T).Name + ending);
+            
+            catch
+        {
 
-//        }
-//        }
+            }
+         }
 
-//    }
+                }
 
 
-/*
- * 
- * 1). Wrapper class to store the input from File and Object CMD should search in the file 
- * open Notepad++ and write something into it, save and close  
- * Here it starts with CMD (should be able to take multiple arguments) 
- * */
+            /*
+             * 
+             * 1). Wrapper class to store the input from File and Object CMD should search in the file 
+             * open Notepad++ and write something into it save and close 
+             * Opening CMD is inside the loop (Have to change)
+             * Here it starts with CMD (should be able to take multiple arguments) 
+             * */
 
 
 namespace WindowsFormsApp2
@@ -182,6 +183,7 @@ namespace WindowsFormsApp2
 
                 if (command.StartsWith("Stop"))
                     {
+                    cmd.StartInfo.FileName = @"notepad++";
                     cmd.Kill();
                 }
             if (command.StartsWith("--") || command == string.Empty) continue;  // Skip commentBlocks and skipEmptylines
